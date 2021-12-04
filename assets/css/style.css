@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  --Violet-color: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  --font-Poppins: "Poppins", sans-serif;
+  --font-Open-Sans: "Open Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0f0f0;
+  font-family: var(--font-Poppins);
+  color: white;
+}
+main {
+  background: var(--Violet-color) url("../images/bg-desktop.svg");
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+main > img {
+  width: 200px;
+}
+main .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .content .img {
+  width: 50%;
+  min-width: 300px;
+}
+main .content .img img {
+  width: 100%;
+}
+main .content .info {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+main .content .info p {
+  margin-top: 25px;
+}
+main .content .info a {
+  text-decoration: none;
+  background-color: white;
+  color: var(--Violet-color);
+  height: 44px;
+  width: 144px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+main .content .info a:hover {
+  background-color: #e980e7;
+  color: white;
+}
+main .social {
+  align-self: flex-end;
+  display: flex;
+  width: 110px;
+  justify-content: space-between;
+}
+main .social .logo {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+main .social .logo a {
+  color: white;
+}
+main .social .logo:hover {
+  border: #e980e7 1px solid;
+}
+main .social .logo a:hover {
+  color: #e980e7;
+}
+/* media screen style */
+@media only screen and (max-width: 770px) {
+  main {
+    background-image: url("../images/bg-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  main .content .info {
+    text-align: center;
+    width: 100%;
+  }
+  main .content .info a {
+    align-self: center;
+  }
+  main .content .img {
+    width: 100%;
+  }
+  main .social {
+    align-self: center;
+  }
+}
